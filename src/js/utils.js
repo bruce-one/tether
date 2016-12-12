@@ -193,7 +193,7 @@ function getScrollBarSize() {
   return _scrollBarSize;
 }
 
-function extend(out={}) {
+var extend = function extend(out={}) {
   const args = [];
 
   Array.prototype.push.apply(args, arguments);
@@ -211,7 +211,7 @@ function extend(out={}) {
   return out;
 }
 
-function removeClass(el, name) {
+var removeClass = function removeClass(el, name) {
   if (typeof el.classList !== 'undefined') {
     name.split(' ').forEach(cls => {
       if (cls.trim()) {
@@ -225,7 +225,7 @@ function removeClass(el, name) {
   }
 }
 
-function addClass(el, name) {
+var addClass = function addClass(el, name) {
   if (typeof el.classList !== 'undefined') {
     name.split(' ').forEach(cls => {
       if (cls.trim()) {

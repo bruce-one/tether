@@ -1639,7 +1639,7 @@ function getScrollBarSize() {
   return _scrollBarSize;
 }
 
-function extend() {
+var extend = function extend() {
   var out = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
   var args = [];
@@ -1657,9 +1657,9 @@ function extend() {
   });
 
   return out;
-}
+};
 
-function removeClass(el, name) {
+var removeClass = function removeClass(el, name) {
   if (typeof el.classList !== 'undefined') {
     name.split(' ').forEach(function (cls) {
       if (cls.trim()) {
@@ -1671,9 +1671,9 @@ function removeClass(el, name) {
     var className = getClassName(el).replace(regex, ' ');
     setClassName(el, className);
   }
-}
+};
 
-function addClass(el, name) {
+var addClass = function addClass(el, name) {
   if (typeof el.classList !== 'undefined') {
     name.split(' ').forEach(function (cls) {
       if (cls.trim()) {
@@ -1685,7 +1685,7 @@ function addClass(el, name) {
     var cls = getClassName(el) + (' ' + name);
     setClassName(el, cls);
   }
-}
+};
 
 function hasClass(el, name) {
   if (typeof el.classList !== 'undefined') {
